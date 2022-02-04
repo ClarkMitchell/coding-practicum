@@ -1,0 +1,71 @@
+:root {
+  --lg-breakpoint: 1000px;
+  --font-sans: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell,
+    Noto Sans, sans-serif;
+  --font-serif: ui-serif, serif;
+  --font-mono: Dank Mono, Operator Mono, Inconsolata, Fira Mono, ui-monospace,
+    SF Mono, Monaco, Droid Sans Mono, Source Code Pro, monospace;
+}
+
+main {
+  font-family: var(--font-serif);
+}
+
+h1 {
+  font-family: var(--font-mono);
+  color: darkslategray;
+}
+
+label {
+  font-family: var(--font-sans);
+}
+
+tr:nth-child(even) {
+  background-color: whitesmoke;
+}
+
+td {
+  border-style: none;
+}
+
+thead th {
+  border-bottom: 0;
+}
+
+thead th button {
+  background-color: unset;
+  color: darkslategray;
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  letter-spacing: 0.1rem;
+}
+
+thead th button:hover,
+thead th button:active {
+  background-color: unset;
+  color: black;
+  border-color: transparent;
+}
+
+thead th button span.ascending:after {
+  content: " ▲";
+}
+
+thead th button span.descending:after {
+  content: " ▼";
+}
+
+form[name="filters"] {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-block: 1rem;
+}
+
+.hidden {
+  display: none;
+}
+
+table {
+  width: 100%;
+}
