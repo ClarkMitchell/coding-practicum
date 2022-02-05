@@ -1,6 +1,6 @@
 import "./styles.css";
 import * as React from "react";
-import { EventList } from "@components/EventList/EventList";
+import { EventTable } from "components/EventTable/EventTable";
 import { Events } from "types";
 
 export default function App() {
@@ -19,7 +19,7 @@ export default function App() {
     <main>
       <article>
         <h1>Awesome Events</h1>
-        <EventList events={events} />
+        <EventTable events={events} />
       </article>
     </main>
   );

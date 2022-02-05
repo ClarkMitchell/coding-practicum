@@ -1,10 +1,9 @@
 :root {
   --lg-breakpoint: 1000px;
-  --font-sans: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell,
-    Noto Sans, sans-serif;
+  --font-sans: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif;
   --font-serif: ui-serif, serif;
-  --font-mono: Dank Mono, Operator Mono, Inconsolata, Fira Mono, ui-monospace,
-    SF Mono, Monaco, Droid Sans Mono, Source Code Pro, monospace;
+  --font-mono: Dank Mono, Operator Mono, Inconsolata, Fira Mono, ui-monospace, SF Mono, Monaco,
+    Droid Sans Mono, Source Code Pro, monospace;
 }
 
 main {
@@ -55,7 +54,7 @@ thead th button span.descending:after {
   content: " ▼";
 }
 
-form[name="filters"] {
+form[name="filters"] fieldset {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
@@ -68,4 +67,37 @@ form[name="filters"] {
 
 table {
   width: 100%;
+}
+
+input[type="checkbox"]:focus {
+  background-color: var(--white);
+  border-color: var(--primary-400);
+  box-shadow: 0 0 0 0.2rem rgb(59 130 246 / 50%);
+  outline: 0;
+}
+
+.sr-only {
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  -webkit-clip-path: inset(50%) !important;
+  clip-path: inset(50%) !important;
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+  white-space: nowrap !important;
+}
+
+.sr-only-focusable:focus,
+.sr-only-focusable:active {
+  clip: auto !important;
+  -webkit-clip-path: none !important;
+  clip-path: none !important;
+  height: auto !important;
+  margin: auto !important;
+  overflow: visible !important;
+  width: auto !important;
+  white-space: normal !important;
 }

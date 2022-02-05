@@ -26,32 +26,28 @@ export function EventFilters({ events, setEvents }: Props) {
 
   React.useEffect(() => {
     setEvents((currentEvents) =>
-      distance === ""
-        ? events
-        : currentEvents.filter((event) => event.distance <= Number(distance))
+      distance === "" ? events : currentEvents.filter((event) => event.distance <= Number(distance))
     );
   }, [distance, setEvents, events]);
 
   return (
     <form name="filters" onSubmit={(e) => e.preventDefault()}>
-      <label>
-        <input
-          type="checkbox"
-          name="free"
-          onChange={handleFree}
-          checked={isFree}
-        ></input>
-        &nbsp;Free
-      </label>
-      <label>
-        Distance&nbsp;
-        <input
-          type="number"
-          name="distance"
-          onChange={handleNumberInput}
-          defaultValue={distance}
-        />
-      </label>
+      <fieldset>
+        <legend className="sr-only">Event list filters</legend>
+        <label>
+          <input type="checkbox" name="free" onChange={handleFree} checked={isFree}></input>
+          &nbsp;Free
+        </label>
+        <label>
+          Distance&nbsp;
+          <input
+            type="number"
+            name="distance"
+            onChange={handleNumberInput}
+            defaultValue={distance}
+          />
+        </label>
+      </fieldset>
     </form>
   );
 }
